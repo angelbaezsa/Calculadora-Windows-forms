@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace calculadora
 {
-    public partial class Form1 : Form 
+    public partial class frmCalculadora : Form 
     {
-        public Form1()
+        public frmCalculadora()
         {
             InitializeComponent();
         }
@@ -33,6 +33,21 @@ namespace calculadora
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
         {
 
         }

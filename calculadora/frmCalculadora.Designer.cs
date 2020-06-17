@@ -1,6 +1,6 @@
 ﻿namespace calculadora
 {
-    partial class Form1
+    partial class frmCalculadora
     {
         /// <summary>
         /// Required designer variable.
@@ -28,27 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSumar = new System.Windows.Forms.Button();
             this.lblnumero1 = new System.Windows.Forms.Label();
             this.lblnumero2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.lblResultado = new System.Windows.Forms.Label();
+            this.btnRestar = new System.Windows.Forms.Button();
+            this.btnMultiplicar = new System.Windows.Forms.Button();
+            this.btnDividir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnSumar
             // 
-            this.button1.Location = new System.Drawing.Point(170, 133);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 52);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSumar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSumar.Location = new System.Drawing.Point(22, 160);
+            this.btnSumar.Name = "btnSumar";
+            this.btnSumar.Size = new System.Drawing.Size(135, 37);
+            this.btnSumar.TabIndex = 0;
+            this.btnSumar.Text = "+";
+            this.btnSumar.UseVisualStyleBackColor = true;
+            this.btnSumar.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblnumero1
             // 
             this.lblnumero1.AutoSize = true;
-            this.lblnumero1.Location = new System.Drawing.Point(19, 36);
+            this.lblnumero1.Location = new System.Drawing.Point(21, 36);
             this.lblnumero1.Name = "lblnumero1";
             this.lblnumero1.Size = new System.Drawing.Size(51, 13);
             this.lblnumero1.TabIndex = 1;
@@ -68,27 +74,82 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(91, 36);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(353, 20);
+            this.textBox1.Size = new System.Drawing.Size(286, 20);
             this.textBox1.TabIndex = 3;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(91, 83);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(353, 20);
+            this.textBox2.Size = new System.Drawing.Size(286, 20);
             this.textBox2.TabIndex = 4;
             // 
-            // Form1
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(91, 123);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(132, 20);
+            this.textBox3.TabIndex = 5;
+            // 
+            // lblResultado
+            // 
+            this.lblResultado.AutoSize = true;
+            this.lblResultado.Enabled = false;
+            this.lblResultado.Location = new System.Drawing.Point(17, 130);
+            this.lblResultado.Name = "lblResultado";
+            this.lblResultado.Size = new System.Drawing.Size(55, 13);
+            this.lblResultado.TabIndex = 6;
+            this.lblResultado.Text = "Resultado";
+            this.lblResultado.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btnRestar
+            // 
+            this.btnRestar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestar.Location = new System.Drawing.Point(163, 160);
+            this.btnRestar.Name = "btnRestar";
+            this.btnRestar.Size = new System.Drawing.Size(135, 37);
+            this.btnRestar.TabIndex = 7;
+            this.btnRestar.Text = "-";
+            this.btnRestar.UseVisualStyleBackColor = true;
+            this.btnRestar.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btnMultiplicar
+            // 
+            this.btnMultiplicar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMultiplicar.Location = new System.Drawing.Point(304, 160);
+            this.btnMultiplicar.Name = "btnMultiplicar";
+            this.btnMultiplicar.Size = new System.Drawing.Size(135, 37);
+            this.btnMultiplicar.TabIndex = 8;
+            this.btnMultiplicar.Text = "*";
+            this.btnMultiplicar.UseVisualStyleBackColor = true;
+            // 
+            // btnDividir
+            // 
+            this.btnDividir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDividir.Location = new System.Drawing.Point(163, 203);
+            this.btnDividir.Name = "btnDividir";
+            this.btnDividir.Size = new System.Drawing.Size(135, 37);
+            this.btnDividir.TabIndex = 9;
+            this.btnDividir.Text = "%";
+            this.btnDividir.UseVisualStyleBackColor = true;
+            this.btnDividir.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // frmCalculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 224);
+            this.ClientSize = new System.Drawing.Size(468, 255);
+            this.Controls.Add(this.btnDividir);
+            this.Controls.Add(this.btnMultiplicar);
+            this.Controls.Add(this.btnRestar);
+            this.Controls.Add(this.lblResultado);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblnumero2);
             this.Controls.Add(this.lblnumero1);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Controls.Add(this.btnSumar);
+            this.Name = "frmCalculadora";
             this.Text = "Calculadora";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -98,11 +159,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSumar;
         private System.Windows.Forms.Label lblnumero1;
         private System.Windows.Forms.Label lblnumero2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label lblResultado;
+        private System.Windows.Forms.Button btnRestar;
+        private System.Windows.Forms.Button btnMultiplicar;
+        private System.Windows.Forms.Button btnDividir;
     }
 }
 
