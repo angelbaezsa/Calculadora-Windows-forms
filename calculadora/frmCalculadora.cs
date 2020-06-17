@@ -7,49 +7,76 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Logica_Calculadora;
 
 namespace calculadora
 {
-    public partial class frmCalculadora : Form 
+    public partial class frmCalculadora : Form
     {
+
+        Operaciones operador = new Operaciones();
+
         public frmCalculadora()
         {
             InitializeComponent();
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+            
+            
 
-        }
 
-        private void lblnumero1_Click(object sender, EventArgs e)
-        {
 
         }
+             
+        
+    
 
-        private void Form1_Load(object sender, EventArgs e)
+             
+        private void frmCalculadora_Load(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void btnSumar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int numero1 = Convert.ToInt32(txtNumero1.Text);
+                int numero2 = Convert.ToInt32(txtNumero2.Text);
+                int resultado = operador.Sumar(numero1, numero2);
+                txtResultado.Text = Convert.ToString(resultado);
+                
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Insertar numeros", "Advertencia");
+                throw;
+            }
+        }
+        
+        private void btnRestar_Click(Object sender, EventArgs e)
+        {
+            int numero1 = Convert.ToInt32(txtNumero1.Text);
+            int numero2 = Convert.ToInt32(txtNumero2.Text);
+
+            int resultado = operador.Restar(numero1, numero2);
+            txtResultado.Text = Convert.ToString(resultado);
 
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void btnMultiplicar_Click(object sender, EventArgs e)
         {
+            int numero1 = Convert.ToInt32(txtNumero1.Text);
+            int numero2 = Convert.ToInt32(txtNumero2.Text);
+            int resultado = operador.Multiplicar(numero1, numero2);
+            txtResultado.Text = Convert.ToString(resultado);
 
         }
-
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btnDividir_Click(object sender, EventArgs e)
         {
+            int numero1 = Convert.ToInt32(txtNumero1.Text);
+            int numero2 = Convert.ToInt32(txtNumero2.Text);
 
-        }
-
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-
+            float resultado = operador.Dividir(numero1, numero2);
+            txtResultado.Text = Convert.ToString(resultado);
         }
     }
 }

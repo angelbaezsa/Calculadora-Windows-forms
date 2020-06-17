@@ -1,0 +1,9 @@
+C:\Users\Angel Baez\Desktop\ITLA\cursos aprendizaje\C#\Calculadora\Logica Calculadora\bin\Debug\netstandard2.0\Logica Calculadora.deps.json
+C:\Users\Angel Baez\Desktop\ITLA\cursos aprendizaje\C#\Calculadora\Logica Calculadora\bin\Debug\netstandard2.0\Logica Calculadora.dll
+C:\Users\Angel Baez\Desktop\ITLA\cursos aprendizaje\C#\Calculadora\Logica Calculadora\bin\Debug\netstandard2.0\Logica Calculadora.pdb
+C:\Users\Angel Baez\Desktop\ITLA\cursos aprendizaje\C#\Calculadora\Logica Calculadora\obj\Debug\netstandard2.0\Logica Calculadora.csprojAssemblyReference.cache
+C:\Users\Angel Baez\Desktop\ITLA\cursos aprendizaje\C#\Calculadora\Logica Calculadora\obj\Debug\netstandard2.0\Logica Calculadora.AssemblyInfoInputs.cache
+C:\Users\Angel Baez\Desktop\ITLA\cursos aprendizaje\C#\Calculadora\Logica Calculadora\obj\Debug\netstandard2.0\Logica Calculadora.AssemblyInfo.cs
+C:\Users\Angel Baez\Desktop\ITLA\cursos aprendizaje\C#\Calculadora\Logica Calculadora\obj\Debug\netstandard2.0\Logica Calculadora.csproj.CoreCompileInputs.cache
+C:\Users\Angel Baez\Desktop\ITLA\cursos aprendizaje\C#\Calculadora\Logica Calculadora\obj\Debug\netstandard2.0\Logica Calculadora.dll
+C:\Users\Angel Baez\Desktop\ITLA\cursos aprendizaje\C#\Calculadora\Logica Calculadora\obj\Debug\netstandard2.0\Logica Calculadora.pdb

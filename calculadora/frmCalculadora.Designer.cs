@@ -31,9 +31,9 @@
             this.btnSumar = new System.Windows.Forms.Button();
             this.lblnumero1 = new System.Windows.Forms.Label();
             this.lblnumero2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNumero1 = new System.Windows.Forms.TextBox();
+            this.txtNumero2 = new System.Windows.Forms.TextBox();
+            this.txtResultado = new System.Windows.Forms.TextBox();
             this.lblResultado = new System.Windows.Forms.Label();
             this.btnRestar = new System.Windows.Forms.Button();
             this.btnMultiplicar = new System.Windows.Forms.Button();
@@ -49,7 +49,7 @@
             this.btnSumar.TabIndex = 0;
             this.btnSumar.Text = "+";
             this.btnSumar.UseVisualStyleBackColor = true;
-            this.btnSumar.Click += new System.EventHandler(this.button1_Click);
+            this.btnSumar.Click += new System.EventHandler(this.btnSumar_Click);
             // 
             // lblnumero1
             // 
@@ -59,7 +59,6 @@
             this.lblnumero1.Size = new System.Drawing.Size(51, 13);
             this.lblnumero1.TabIndex = 1;
             this.lblnumero1.Text = "numero 1";
-            this.lblnumero1.Click += new System.EventHandler(this.lblnumero1_Click);
             // 
             // lblnumero2
             // 
@@ -70,26 +69,27 @@
             this.lblnumero2.TabIndex = 2;
             this.lblnumero2.Text = "Numero 2";
             // 
-            // textBox1
+            // txtNumero1
             // 
-            this.textBox1.Location = new System.Drawing.Point(91, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(286, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtNumero1.Location = new System.Drawing.Point(91, 36);
+            this.txtNumero1.Name = "txtNumero1";
+            this.txtNumero1.Size = new System.Drawing.Size(286, 20);
+            this.txtNumero1.TabIndex = 3;
             // 
-            // textBox2
+            // txtNumero2
             // 
-            this.textBox2.Location = new System.Drawing.Point(91, 83);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(286, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtNumero2.Location = new System.Drawing.Point(91, 83);
+            this.txtNumero2.Name = "txtNumero2";
+            this.txtNumero2.Size = new System.Drawing.Size(286, 20);
+            this.txtNumero2.TabIndex = 4;
             // 
-            // textBox3
+            // txtResultado
             // 
-            this.textBox3.Location = new System.Drawing.Point(91, 123);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(132, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtResultado.Location = new System.Drawing.Point(91, 123);
+            this.txtResultado.Name = "txtResultado";
+            this.txtResultado.ReadOnly = true;
+            this.txtResultado.Size = new System.Drawing.Size(132, 20);
+            this.txtResultado.TabIndex = 5;
             // 
             // lblResultado
             // 
@@ -100,7 +100,6 @@
             this.lblResultado.Size = new System.Drawing.Size(55, 13);
             this.lblResultado.TabIndex = 6;
             this.lblResultado.Text = "Resultado";
-            this.lblResultado.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnRestar
             // 
@@ -111,7 +110,7 @@
             this.btnRestar.TabIndex = 7;
             this.btnRestar.Text = "-";
             this.btnRestar.UseVisualStyleBackColor = true;
-            this.btnRestar.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnRestar.Click += new System.EventHandler(this.btnRestar_Click);
             // 
             // btnMultiplicar
             // 
@@ -121,6 +120,7 @@
             this.btnMultiplicar.Size = new System.Drawing.Size(135, 37);
             this.btnMultiplicar.TabIndex = 8;
             this.btnMultiplicar.Text = "*";
+            this.btnMultiplicar.Click += new System.EventHandler(this.btnMultiplicar_Click);
             this.btnMultiplicar.UseVisualStyleBackColor = true;
             // 
             // btnDividir
@@ -132,7 +132,7 @@
             this.btnDividir.TabIndex = 9;
             this.btnDividir.Text = "%";
             this.btnDividir.UseVisualStyleBackColor = true;
-            this.btnDividir.Click += new System.EventHandler(this.button1_Click_2);
+            this.btnDividir.Click += new System.EventHandler(this.btnDividir_Click);
             // 
             // frmCalculadora
             // 
@@ -143,15 +143,15 @@
             this.Controls.Add(this.btnMultiplicar);
             this.Controls.Add(this.btnRestar);
             this.Controls.Add(this.lblResultado);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtResultado);
+            this.Controls.Add(this.txtNumero2);
+            this.Controls.Add(this.txtNumero1);
             this.Controls.Add(this.lblnumero2);
             this.Controls.Add(this.lblnumero1);
             this.Controls.Add(this.btnSumar);
             this.Name = "frmCalculadora";
             this.Text = "Calculadora";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.frmCalculadora_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,9 +162,9 @@
         private System.Windows.Forms.Button btnSumar;
         private System.Windows.Forms.Label lblnumero1;
         private System.Windows.Forms.Label lblnumero2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNumero1;
+        private System.Windows.Forms.TextBox txtNumero2;
+        private System.Windows.Forms.TextBox txtResultado;
         private System.Windows.Forms.Label lblResultado;
         private System.Windows.Forms.Button btnRestar;
         private System.Windows.Forms.Button btnMultiplicar;

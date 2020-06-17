@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logica Calculadora\Logica Calculadora.csproj">
+      <Project>{aa0a0ef8-1fce-4045-b51f-d416bf6a7e90}</Project>
+      <Name>Logica Calculadora</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
